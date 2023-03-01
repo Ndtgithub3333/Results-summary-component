@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    background-color: var(--Light-lavender);
+    height: 100vh;
+    width: 100vw;
+}
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --Light-slate-blue
+    /*(background)*/
+    : hsl(252, 100%, 67%);
+    --Light-royal-blue
+    /*(background)*/
+    : hsl(241, 81%, 54%);
+
+    --Violet-blue
+    /*(circle)*/
+    : hsla(256, 72%, 46%, 1);
+    --Persian-blue
+    /*(circle)*/
+    : hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* Font size (paragraphs): 18px */
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    width: 580px;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.38);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card__left {
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    width: 50%;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    color: var(--Light-lavender);
+}
+
+.card__left__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card__left__point {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card__left__point--client {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.card__left__point--total {}
+
+.card__left__status {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+
+.card__left__description {
+    text-align: center;
+    font-size: 0.9rem;;
+}
+
+.card__right {
+    width: 50%;
+    padding: 25px;
+}
+
+.card__right__title {
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 20px;
+}   
+
+.card__right__detail {
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.card__right__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.card__right__item:nth-child(1) {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.15);
+}
+.card__right__item:nth-child(2) {
+    color: var(--Orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.15);
+    
+}
+.card__right__item:nth-child(3) {
+    color: var(--Green-teal);
+    background-color: hsla(166, 100%, 37%, 0.15);
+}
+.card__right__item:nth-child(4) {
+    color: var(--Cobalt-blue);
+    background-color: hsla(234, 85%, 45%, 0.15);
+}
+
+.card__right__item--title {
+    display: flex;
+    align-items: center;
+}
+
+.card__right__item--title img {
+    margin-right: 10px;
+}
+
+.card__right__item--point {
+    display: flex;
+}
+
+.card__right__item--point-1 {
+    color: var(--Dark-gray-blue);
+    font-size: 16px;
+
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.card__right__item--point-2 {
+    display: flex;
+    align-items: center;
+    color: hsla(224, 30%, 27%, 0.504);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.card__right__btn {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    padding: 14px 0;
+    background-color: var(--Dark-gray-blue);
+}
+
+.card__right__btn:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;;
+        width: 400px;
+        min-width: 400px;
+        margin: 10px;
+    }    
+    .card__left {
+        width: 100%;
+        border-radius:0 0 20px 20px ;
+    }
+    .card__right {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+}
